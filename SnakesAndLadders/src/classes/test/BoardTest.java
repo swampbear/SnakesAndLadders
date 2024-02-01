@@ -1,6 +1,11 @@
 package classes.test;
 
 import classes.*;
+import classes.DEPR.LadderSquare;
+import classes.DEPR.SnakeSquare;
+import classes.Models.Board;
+import classes.Models.Square;
+
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 

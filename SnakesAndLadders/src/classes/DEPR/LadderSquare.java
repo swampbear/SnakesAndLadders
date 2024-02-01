@@ -1,4 +1,7 @@
-package classes;
+package classes.DEPR;
+
+import classes.Models.Player;
+import classes.Models.Square;
 
 public class LadderSquare extends Square{
     private int bottom;

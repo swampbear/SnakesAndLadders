@@ -1,11 +1,14 @@
-package classes;
+package classes.Models;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import classes.Factories.SquareFactory;
+
 public class Board {
     private List<Square> squares;
-    private int number_of_squares = 100;
+    private final int NUMBER_OF_SQUARES = 100;
+
 
     public Board(){
         squares = new ArrayList<>();
@@ -13,8 +16,8 @@ public class Board {
     }
 
     public void initializeBoard() {
-        for (int i = 0; i <= number_of_squares; i++) { // fant noko her. 
-            squares.add(SquareFactory.createSquare(number_of_squares));
+        for (int i = 0; i <= NUMBER_OF_SQUARES; i++) { // fant noko her. 
+            squares.add(SquareFactory.createSquare(i));
         }
     }
     public Square findSquare(int number){
@@ -25,7 +28,7 @@ public class Board {
     }
 
     public int getNumberOfSquares(){
-        return number_of_squares;
+        return NUMBER_OF_SQUARES;
     }
 
 

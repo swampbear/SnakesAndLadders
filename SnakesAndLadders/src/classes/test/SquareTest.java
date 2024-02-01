@@ -1,6 +1,11 @@
 package classes.test;
 
 import classes.*;
+import classes.DEPR.LadderSquare;
+import classes.DEPR.SnakeSquare;
+import classes.Models.Player;
+import classes.Models.Square;
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

@@ -1,4 +1,4 @@
-package classes;
+package classes.Models;
 
 public class Piece {
     private int position;
