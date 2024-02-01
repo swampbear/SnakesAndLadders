@@ -20,15 +20,13 @@ public class Player {
 
     public void movePiece(int roll, Board board) {
         int newPosition = piece.getPosition() + roll;
-        System.out.println(newPosition);
-
-        if(newPosition < board.getNumberOfSquares()-1) {
-            System.out.println(name + "´s piece moved to square " + newPosition);
+    
+        if (newPosition <= board.getNumberOfSquares()) {
             piece.setPosition(newPosition);
+            System.out.println(String.format("%s's piece moved to square %d", name, newPosition));
+        } else {
+            System.out.println(String.format("%s rolled too high and skips the turn", name));
         }
-        else {
-            System.out.println(name + " rolled to high and skips the turn");
-            piece.setPosition(piece.getPosition());
-        }
-    };
+    }
+    
 }

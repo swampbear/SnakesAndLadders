@@ -13,15 +13,15 @@ public class Board {
     }
 
     public void initializeBoard() {
-        for (int i = 1; i <= number_of_squares; i++) {
+        for (int i = 0; i <= number_of_squares; i++) { // fant noko her. 
             squares.add(SquareFactory.createSquare(number_of_squares));
         }
     }
     public Square findSquare(int number){
-        if (number< 1) {
+        if (number < 1 || number > 100) {
             throw new IllegalArgumentException("Invalid square");
         }
-        return squares.get(number);
+        return squares.get(number); // java.lang.IndexOutOfBoundsException: Index 100 out of bounds for length 100
     }
 
     public int getNumberOfSquares(){

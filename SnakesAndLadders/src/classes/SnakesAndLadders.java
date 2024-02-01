@@ -41,7 +41,7 @@ public class SnakesAndLadders{
 
     public void checkWinner(Player player){
 
-        if(player.getPiece().getPosition() == 100){
+        if(player.getPiece().getPosition() >= 100){
            System.out.println(player.getName() + "Won");
            isWon = true;
        }else {
