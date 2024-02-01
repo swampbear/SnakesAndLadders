@@ -3,15 +3,8 @@ package classes.Models;
 public enum SquareType {
     NORMAL("Normal") {
         @Override
-        public void arrivedOn(Player player, int position) {
-            // Implement logic for a normal square
-            System.out.println("Normal normal square");
-        }
+        public void arrivedOn(Player player, int position) {}
 
-        @Override
-        public void arrivedOn(Player player, int position, int destination) {
-           
-        }
     },
     SNAKE("Snake") {
         @Override
@@ -34,12 +27,9 @@ public enum SquareType {
         this.name = name;
     }
 
-    public abstract void arrivedOn(Player player, int position, int destination);
+    public void arrivedOn(Player player, int position, int destination){}
 
-    // Overloaded method for NORMAL which doesn't need a destination
-    public void arrivedOn(Player player, int position) {
-        throw new UnsupportedOperationException("This square type requires a destination.");
-    }
+    public void arrivedOn(Player player, int position) {}
 
     public String getName() {
         return name;
