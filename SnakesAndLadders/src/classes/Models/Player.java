@@ -1,4 +1,5 @@
 package classes.Models;
+import classes.Config.ColorConfig;
 
 public class Player {
     private String name;
@@ -25,7 +26,7 @@ public class Player {
             piece.setPosition(newPosition);
             System.out.println(String.format("%s's piece moved to square %d", name, newPosition));
         } else {
-            System.out.println(String.format("%s rolled too high and skips the turn", name));
+            System.out.println(ColorConfig.TEXT_BRIGHT_YELLOW + String.format("%s rolled too high and skips the turn", name) + ColorConfig.TEXT_RESET);
         }
     }
     

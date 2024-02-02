@@ -100,7 +100,7 @@ public class SnakesAndLadders {
      */
     private void checkWinner(Player player) {
         if (player.getPiece().getPosition() >= 100) {
-            System.out.println(player.getName() + " Won!");
+            System.out.println(ColorConfig.TEXT_BRIGHT_GREEN + player.getName() + " Won!" + ColorConfig.TEXT_RESET);
             isWon = true;
         }
     }
