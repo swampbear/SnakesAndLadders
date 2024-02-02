@@ -1,4 +1,4 @@
-package classes.test;
+package test;
 
 import classes.*;
 import classes.DEPR.LadderSquare;

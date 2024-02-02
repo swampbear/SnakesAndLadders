@@ -1,4 +1,4 @@
-package classes.test;
+package test;
 
 import classes.Models.Piece;
 import classes.Models.Player;
