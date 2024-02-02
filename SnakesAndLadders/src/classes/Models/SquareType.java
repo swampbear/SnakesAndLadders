@@ -11,7 +11,7 @@ public enum SquareType {
     SNAKE("Snake") {
         @Override
         public void arrivedOn(Player player, int position, int destination) {
-            System.out.println(ColorConfig.TEXT_BRIGHT_YELLOW + "Oh no, you landed on a snake square! Your piece is moved to square " + destination + ColorConfig.TEXT_RESET);
+            System.out.println(ColorConfig.TEXT_BRIGHT_RED + "Oh no, you landed on a snake square! Your piece is moved to square " + destination + ColorConfig.TEXT_RESET);
             player.getPiece().setPosition(destination);
         }
     },
