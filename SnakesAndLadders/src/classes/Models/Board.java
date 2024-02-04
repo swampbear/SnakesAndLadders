@@ -9,13 +9,12 @@ public class Board {
     private List<Square> squares;
     private final int NUMBER_OF_SQUARES = 100;
 
-
     public Board(){
         squares = new ArrayList<>();
         initializeBoard();
     }
 
-    public void initializeBoard() {
+    private void initializeBoard() {
         for (int i = 0; i <= NUMBER_OF_SQUARES; i++) { // fant noko her. 
             squares.add(SquareFactory.createSquare(i));
         }

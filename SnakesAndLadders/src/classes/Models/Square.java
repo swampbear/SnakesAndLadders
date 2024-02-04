@@ -15,6 +15,10 @@ public class Square {
         this.destination = destination;
     }
 
+    public SquareType getSquareType(){
+        return type;
+    }
+
     public void arrivedOn(Player player) {
         if (type == SquareType.NORMAL) {
             type.arrivedOn(player, id);

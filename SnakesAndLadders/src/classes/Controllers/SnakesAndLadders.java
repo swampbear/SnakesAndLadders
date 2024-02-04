@@ -34,14 +34,14 @@ public class SnakesAndLadders {
      * Registers players for the game.
      * Players enter their names through the console, and typing 'done' concludes the registration process.
      */
-    public void registerPlayers() {
+    private void registerPlayers() {
         System.out.println("Enter player names (press enter after each name, type 'done' to finish):");
 
         while (true) {
             String playerName = scanner.nextLine().trim();
-            if ("done".equalsIgnoreCase(playerName) || playerName.isEmpty()) {
-                if (players.isEmpty()) {
-                    System.out.println("At least one player is required to start the game. Please enter a player name:");
+            if ("done".equalsIgnoreCase(playerName) || playerName.isEmpty() || players.size()>=4) {
+                if (players.size()<2) {
+                    System.out.println("At least two player is required to start the game. Please enter a player name:");
                     continue;
                 } else {
                     break;

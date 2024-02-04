@@ -1,49 +1,55 @@
 package test;
 
-import classes.*;
-import classes.DEPR.LadderSquare;
-import classes.DEPR.SnakeSquare;
 import classes.Models.Board;
-import classes.Models.Square;
 
+
+import classes.Models.Square;
+import classes.Models.SquareType;
 import org.junit.Before;
 import org.junit.jupiter.api.Test;
 
+import static classes.Models.SquareType.SNAKE;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class BoardTest {
 
     private Board board;
 
-    public void setUp(){
+    private void setUp(){
         this.board = new Board();
     }
 
     @Test
     public void testBoardInitialization(){
         setUp();
-        for (int i = 1; i <= 100; i++) {
+        assertEquals(100, board.getNumberOfSquares());
+    }
+
+    @Test
+    public void testValidSquareRetrieval(){
+        setUp();
+        for (int i = 1; i <= board.getNumberOfSquares() ; i++) {
             assertNotNull(board.findSquare(i));
         }
     }
+
     @Test
-    public void testSnakeSquares(){
+    public void testNormalSquareType(){
         setUp();
-        int head = 35;
-       Square square = board.findSquare(head);
-        assertInstanceOf(SnakeSquare.class, square);
+        Square square = board.findSquare(4);
+        assertEquals(SquareType.NORMAL, square.getSquareType());
     }
     @Test
-    public void testLadderSquares(){
+    public void testLadderSquareType(){
         setUp();
-        int bottom = 3;
-        Square square = board.findSquare(bottom);
-        assertInstanceOf(LadderSquare.class, square);
+        Square square = board.findSquare(3);
+        assertEquals(SquareType.LADDER, square.getSquareType());
     }
     @Test
-    public void testNormalSquares(){
+    public void testSnakeSquareType(){
         setUp();
-        Square square = board.findSquare(1);
-        assertInstanceOf(NormalSquare.class, square);
+        Square square = board.findSquare(97);
+        assertEquals(SNAKE, square.getSquareType());
     }
+
 }
